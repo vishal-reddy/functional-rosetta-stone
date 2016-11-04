@@ -28,7 +28,3 @@ tasks.withType(ScalaCompile) {
         force = true
     }
 }
-
-clojureTest {
-    srcDirs "src"
-}

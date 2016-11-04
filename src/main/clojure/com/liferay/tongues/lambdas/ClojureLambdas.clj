@@ -1,5 +1,4 @@
-(ns com.liferay.tongues.lambdas.ClojureLambdas
-    (gen-class))
+(ns com.liferay.tongues.lambdas.ClojureLambdas)
 
 (defn addThis
       [x y]
