@@ -1,7 +1,3 @@
 package com.liferay.tongues.lambdas
 
-class KotlinLambdas {
-
-    fun addThis(a: Int, b: Int): Int = a + b
-
-}
+val addThis: (Int, Int) -> Int = { x: Int, y: Int -> x + y }

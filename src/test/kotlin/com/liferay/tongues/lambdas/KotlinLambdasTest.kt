@@ -7,7 +7,7 @@ class KotlinLambdasTest {
 
     @Test
     fun addThisTest() {
-        Assert.assertTrue(KotlinLambdas().addThis(1, 1) == 2)
+        Assert.assertTrue(addThis(1, 1) == 2)
     }
 
 }

@@ -1,5 +1,3 @@
 (ns com.liferay.tongues.lambdas.ClojureLambdas)
 
-(defn addThis
-      [x y]
-      (+ x y))
+(def addThis #(+ %1 %2))
