@@ -1,6 +1,6 @@
-(ns com.liferay.tongues.lambdas.clojurelambdas_test
+(ns com.liferay.tongues.function.types.clojurelambdas_test
     (:use clojure.test)
-    (:use com.liferay.tongues.lambdas.ClojureLambdas))
+    (:use com.liferay.tongues.function.types.ClojureLambdas))
 
 (deftest testAddThis
    (testing "addThis function works")

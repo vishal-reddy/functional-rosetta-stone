@@ -1,4 +1,4 @@
-package com.liferay.tongues.lambdas;
+package com.liferay.tongues.function.types;
 
 import java.util.function.BiFunction;
 

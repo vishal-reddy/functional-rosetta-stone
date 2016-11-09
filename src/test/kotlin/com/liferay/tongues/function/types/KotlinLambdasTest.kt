@@ -1,4 +1,4 @@
-package com.liferay.tongues.lambdas
+package com.liferay.tongues.function.types
 
 import org.junit.Assert
 import org.junit.Test
