@@ -29,4 +29,26 @@ dependencies {
     testCompile 'junit:junit:4.12'
     testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
     testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+}
+
+configurations { nrepl }
+dependencies {
+    nrepl 'org.clojure:tools.nrepl:0.2.7'
+    nrepl 'org.clojure:clojure:1.6.0'
+}
+task nrepl(type: JavaExec) {
+    classpath project.sourceSets.main.clojure.srcDirs,
+            project.sourceSets.test.clojure.srcDirs,
+            sourceSets.test.runtimeClasspath,
+            sourceSets.main.runtimeClasspath,
+            configurations.nrepl
+
+    main = "clojure.main"
+    args '--eval', "(ns gradle-nrepl (:require [clojure.tools.nrepl.server :refer (start-server stop-server)]))",
+            '--eval', "(println \"Starting nrepl server on port $nreplPort\")",
+            '--eval', "(def server (start-server :port $nreplPort))"
+}
+sourceSets {
+    main.java.srcDirs += 'src/main/kotlin'
 }
