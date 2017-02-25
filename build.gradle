@@ -22,10 +22,12 @@ buildscript {
 repositories {
     mavenCentral()
     clojarsRepo()
+    jcenter()
 }
 
 dependencies {
     compile 'org.clojure:clojure:1.8.0'
+    compile 'org.funktionale:funktionale-currying:1.0.0-final'
     testCompile 'junit:junit:4.12'
     testCompile "org.jetbrains.kotlin:kotlin-test:$kotlin_version"
     testCompile "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"
@@ -33,10 +35,12 @@ dependencies {
 }
 
 configurations { nrepl }
+
 dependencies {
     nrepl 'org.clojure:tools.nrepl:0.2.7'
     nrepl 'org.clojure:clojure:1.6.0'
 }
+
 task nrepl(type: JavaExec) {
     classpath project.sourceSets.main.clojure.srcDirs,
             project.sourceSets.test.clojure.srcDirs,
@@ -49,6 +53,7 @@ task nrepl(type: JavaExec) {
             '--eval', "(println \"Starting nrepl server on port $nreplPort\")",
             '--eval', "(def server (start-server :port $nreplPort))"
 }
+
 sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
 }

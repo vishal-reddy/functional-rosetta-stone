@@ -1,4 +1,4 @@
-package com.liferay.special.functions;
+package com.liferay.tongues.special.functions;
 
 import org.junit.Assert;
 import org.junit.Test;
