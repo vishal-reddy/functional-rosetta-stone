@@ -57,3 +57,5 @@ task nrepl(type: JavaExec) {
 sourceSets {
     main.java.srcDirs += 'src/main/kotlin'
 }
+
+defaultTasks 'clean', 'test', 'nrepl'
