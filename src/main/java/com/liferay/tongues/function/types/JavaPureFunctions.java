@@ -11,15 +11,10 @@ public class JavaPureFunctions {
 			return x + y;
 		}
 
-		public int getMainVariable() {
-			return _mainVariable;
-		}
-
 		public int getSideVariable() {
 			return _sideVariable;
 		}
 
-		private int _mainVariable = 1;
 		private int _sideVariable = 2;
 
 	}
